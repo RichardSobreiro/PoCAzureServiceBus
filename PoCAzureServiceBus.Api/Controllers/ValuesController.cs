@@ -15,20 +15,20 @@ namespace PoCAzureServiceBus.Api.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        const string ServiceBusConnectionString = "Endpoint=sb://pontocarga.servicebus.windows.net/;SharedAccessKeyName=ExpedicaoWeb;SharedAccessKey=N62t5AUF+Fq55hX/yvaFNE2HCyCge7HRhRscG4B3FFE=";
+        const string ServiceBusConnectionString = "";
         static string queueName = "queue_{0}";
         static IQueueClient queueClient;
 
         private static DateTime tokenExpiresAtUtc = DateTime.MinValue;
 
         static string tokenValue = string.Empty;
-        static string tenantId = "1e0e1098-4ece-48f5-9b46-faba16bfe1e3";
-        static string clientId = "fe635c95-195e-4381-b93a-a443001a27fc";
-        static string clientSecret = "72455776-6671-4816-bf66-e0bc1c86c476";
-        static string subscriptionId = "deda6260-a702-451a-bc33-f999b51dee90";
+        static string tenantId = "";
+        static string clientId = "";
+        static string clientSecret = "";
+        static string subscriptionId = "";
 
-        private static string resourceGroupName = "PontoCargaServiceBus";
-        const string namespaceName = "pontocarga";
+        private static string resourceGroupName = "";
+        const string namespaceName = "";
 
         /// <summary>
         /// Envia mensagem para o service bus e cria a fila especificada para o identificador caso o mesmo não exista
@@ -106,7 +106,7 @@ namespace PoCAzureServiceBus.Api.Controllers
         static async Task EnviarMensagem(string queueName)
         {
             string acao = "ArquivoPesagem";
-            string conteudo = "Cliente: Fonseca gordinho, Traco: Bengay";
+            string conteudo = "Cliente: xxx, Traco: xxxx";
 
             await SendMessagesAsync(acao, conteudo);
 
