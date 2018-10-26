@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PoCAzureServiceBus.Api</name>
+    </assembly>
+    <members>
+        <member name="M:PoCAzureServiceBus.Api.Controllers.ValuesController.Post(System.String)">
+            <summary>
+            Envia mensagem para o service bus e cria a fila especificada para o identificador caso o mesmo não exista
+            </summary>
+            <param name="identificador">id da fila</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
